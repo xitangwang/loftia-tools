@@ -1,7 +1,7 @@
 (function(){var D=window.CROPS,tb=document.getElementById('cbody');if(!tb)return;
 var $=function(i){return document.getElementById(i)};
 function row(c,i){var tr=document.createElement('tr');tr.dataset.i=i;
-tr.innerHTML='<td><a href="'+REL+'crops/'+c.slug+'/">'+c.name+'</a> '+(c.custom?'<span class="tag tbd">custom</span>':'<span class="tag" title="Seed price, sell price and grow time verified from community data (demo)">demo data</span>')+'</td>'+
+tr.innerHTML='<td><a href="'+window.ROOT+'crops/'+c.slug+'/">'+c.name+'</a> '+(c.custom?'<span class="tag tbd">custom</span>':'<span class="tag" title="Seed price, sell price and grow time verified from community data (demo)">demo data</span>')+'</td>'+
 '<td><input type="number" min="0" data-k="seed" value="'+(c.seed??'')+'" placeholder="TBD"></td><td><input type="number" min="0" data-k="sell" value="'+(c.sell??'')+'" placeholder="TBD"></td>'+
 '<td><input type="number" min="0.1" step="0.5" data-k="grow" value="'+(c.grow??'')+'" placeholder="TBD"></td><td><input type="number" min="1" data-k="yield" value="'+(c.yield??1)+'" title="Crops per harvest. Not confirmed; default 1"></td>'+
 '<td class="p">–</td><td class="ph">–</td><td class="tot">–</td>';tb.appendChild(tr)}
