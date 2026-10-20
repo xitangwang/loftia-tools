@@ -1,0 +1,9 @@
+(function(){var S=window.SKILLS,box=document.getElementById('planner');if(!box)return;var key='loftia-plan';var st={};try{st=JSON.parse(location.hash.slice(1)?atob(location.hash.slice(1)):localStorage.getItem(key)||'{}')}catch(e){}
+S.skills.forEach(function(s){var c=document.createElement('div');c.className='card';c.id=s.slug;var h='<h2 style="margin:0">'+s.name+' <span class="muted">max Lv '+s.max+'</span></h2><p class="muted">'+s.desc+'</p><label>Planned level <input type="number" min="1" max="'+s.max+'" value="'+(st['L'+s.slug]||1)+'" data-lvl="'+s.slug+'"></label>';
+s.perks.forEach(function(p,pi){p[2].forEach(function(t,ti){var id=s.slug+'-'+pi+'-'+ti;h+='<label class="perk"><input type="checkbox" data-id="'+id+'" data-cost="'+t[1]+'" data-lv="'+t[0]+'" data-s="'+s.slug+'" '+(st[id]?'checked':'')+'><span><b>'+p[0]+(p[2].length>1?' (tier '+(ti+1)+')':'')+'</b> — '+p[1]+'<br><span class="muted">Needs Lv '+t[0]+' · '+t[1]+' pts</span> <span class="warn"></span></span></label>'})});
+c.innerHTML=h;box.appendChild(c)});
+function up(){var tot=0,n=0,o={};box.querySelectorAll('[data-lvl]').forEach(function(i){o['L'+i.dataset.lvl]=+i.value});
+box.querySelectorAll('[data-id]').forEach(function(i){var w=i.parentNode.querySelector('.warn');w.textContent='';if(i.checked){tot+=+i.dataset.cost;n++;o[i.dataset.id]=1;if(+i.dataset.lv>(o['L'+i.dataset.s]||1))w.textContent='⚠ above planned level'}});
+document.getElementById('ptot').textContent=tot;document.getElementById('pn').textContent=n;localStorage.setItem(key,JSON.stringify(o));window._plan=o}
+box.addEventListener('input',up);document.getElementById('share').onclick=function(){var u=location.href.split('#')[0]+'#'+btoa(JSON.stringify(window._plan));history.replaceState(0,'',u);navigator.clipboard&&navigator.clipboard.writeText(u);this.textContent='Link copied'};
+document.getElementById('clr').onclick=function(){localStorage.removeItem(key);location.hash='';location.reload()};up()})();

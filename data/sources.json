@@ -1,0 +1,67 @@
+[
+ {
+  "what": "Crop list, seed prices, sell prices, grow & water times (Tomato, Potato, Carrot, Lettuce, Cotton)",
+  "url": "https://loftiacodex.com/items?category=Resources",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Tomato / Tomato Seed",
+  "url": "https://loftiacodex.com/items/tomato",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Potato / Potato Seed",
+  "url": "https://loftiacodex.com/items/potato",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Carrot / Carrot Seed",
+  "url": "https://loftiacodex.com/items/carrot",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Lettuce / Lettuce Seed",
+  "url": "https://loftiacodex.com/items/lettuce",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Cotton / Cotton Seed",
+  "url": "https://loftiacodex.com/items/cotton",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Dew per hour and cooking profit ranking (cross-check)",
+  "url": "https://loftiacodex.com/economy",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "7 skills, max level and perks",
+  "url": "https://loftiacodex.com/skills",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Farming perks",
+  "url": "https://loftiacodex.com/skills/farming",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Skill Point sources",
+  "url": "https://loftiacodex.com/items/skill-point",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Demo dates, carry-over, name rule, rewards, EA districts",
+  "url": "https://loftia.gg/demo/",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Release date Nov 3 2026, developer, platforms Win/Mac",
+  "url": "https://store.steampowered.com/api/appdetails?appids=2320980",
+  "checked": "2026-10-20"
+ },
+ {
+  "what": "Official FAQ: EA Nov 3 2026 1pm EST, Steam + Epic, Mac/PC, Switch 2027, $29.99 / $24.89 launch discount, Steam Deck support",
+  "url": "https://loftia.gg/",
+  "checked": "2026-10-20"
+ }
+]
